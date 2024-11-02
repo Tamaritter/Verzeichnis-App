@@ -1,1 +1,14 @@
-# Verzeichnis-App
+# Studien-Verzeichnis für Neue Studenten
+
+Ein umfassendes Verzeichnis, um Studienanfängern an der DHBW den Start zu erleichtern. Diese Webseite bietet Checklisten, Campusinformationen, einen Chat und vieles mehr.
+
+## Features
+- **To-Do Liste**: Eine Checkliste mit den wichtigsten Aufgaben zum Studienstart
+- **Campus Informationen**: Infos zur Mensa, Campus-Plan und wichtige Raumnummern
+- **Chat**: Ein einfacher Chat, um mit anderen Studenten zu kommunizieren
+
+## Installation
+
+1. Clone dieses Repository:
+   ```bash
+   git clone https://github.com/username/repository-name.git
