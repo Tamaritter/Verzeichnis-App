@@ -1,4 +1,4 @@
-# Studien-Verzeichnis für Neue Studenten
+# Studien-Verzeichnis 
 
 Ein umfassendes Verzeichnis, um Studienanfängern an der DHBW den Start zu erleichtern. Diese Webseite bietet Checklisten, Campusinformationen, einen Chat und vieles mehr.
 
