@@ -4,5 +4,12 @@
         "en": "Students are the best!",
         "tags": ["dhbw", "motivation"],
         "url": "https://www.dhbw.de"
+    },
+    {
+        "de": "Die DHBW Mannheim ist die beste Hochschule!",
+        "en": "The DHBW Mannheim is the best university!",
+        "tags": ["dhbw", "motivation", "mannheim"],
+        "url": "https://www.mannheim.dhbw.de"
     }
+
 ]
