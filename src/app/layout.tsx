@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
-import AppHeader from "@/components/AppHeader";
+import AppHeader from "@/app/AppHeader";
 import {AppRouterCacheProvider} from "@mui/material-nextjs/v15-appRouter";
 import {Box, CssBaseline, StyledEngineProvider, ThemeProvider, Toolbar} from "@mui/material";
 import theme from "@/theme";
