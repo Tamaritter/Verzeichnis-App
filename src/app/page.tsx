@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid2';
 import {Paper, Typography} from "@mui/material";
 import {Defaults} from "@/appDefaults";
+import Motd from "@/app/Motd";
 
 export default function Home() {
     return (
@@ -16,6 +17,11 @@ export default function Home() {
                     Nullam nullam primis tempus, leo gravida curabitur dictum. Aptent auctor accumsan est est, imperdiet
                     sapien dapibus.
                 </Paper>
+            </Grid>
+            <Grid size={{xs: 0, sm: 3}}/>
+                <Grid size={{xs: 0, sm: 3}}/>
+            <Grid size={{xs: 12, sm: 6}}>
+                <Motd />
             </Grid>
             <Grid size={{xs: 0, sm: 3}}/>
         </Grid>
