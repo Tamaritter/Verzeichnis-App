@@ -5,23 +5,166 @@
         "tags": ["dhbw", "motivation"],
         "url": "https://www.dhbw.de"
     },
+
     {
-        "de": "Die DHBW Mannheim ist die beste Hochschule!",
-        "en": "The DHBW Mannheim is the best university!",
-        "tags": ["dhbw", "motivation", "mannheim"],
-        "url": "https://www.mannheim.dhbw.de"
+        "de": "Die StuV Mannheim organisiert regelmäßige Kneipentouren",
+        "en": "The student representatives regularly organize pub crawls.",
+        "tags": ["dhbw", "motivation", "connect"],
+        "url": "https://www.instagram.com/stuv_dhbw_mannheim?igsh=cHg1YXYzMzhqMHJj"
     },
+
     {
-        "de": "Hacker wollen nur spielen!",
-        "en": "Hackers just want to play!",
-        "tags": ["hacker", "informatik"],
-        "url": "https://www.heise.de"
+        "de": "Die StuV Mannheim hat eine eigene Instagram Seite.",
+        "en": "The student representatives has its own Instagram page",
+        "tags": ["dhbw"],
+        "url": "https://www.instagram.com/stuv_dhbw_mannheim?igsh=cHg1YXYzMzhqMHJj"
     },
+
     {
-        "de": "Die Welt ist eine Scheibe!",
-        "en": "The world is a disc!",
-        "tags": ["wirtschaft"],
-        "url": "https://www.welt.de"
+        "de": "Du kannst dir in der Mensa kostenlos Mehrwegboxen ausleihen. (App: Vytal)",
+        "en": "You can borrow reusable boxes from the canteen free of charge. (App: Vytal)",
+        "tags": ["dhbw", "food"],
+        "url": "https://www.stw-ma.de/nachhaltigkeit/#vytal"
+    },
+
+    {
+        "de": "Den Speiseplan der Mensaria Metropol findet man online",
+        "en": "The menu of the Mensaria Metropol can be found online.",
+        "tags": ["dhbw", "food"],
+        "url": "https://www.stw-ma.de/essen-trinken/speiseplaene/mensaria-metropol-greenes/"
+    },
+
+    {
+        "de": "Deine Campuscard hat eine Autoload-Funktion",
+        "en": "Your CampusCard has an autoload function.",
+        "tags": ["dhbw", "food"],
+        "url": "https://www.stw-ma.de/essen-trinken/autoload/"
+    },
+
+    {
+        "de": "Du kannst dein Autoload auch Online einrichten.",
+        "en": "You can also set up your autoload online.",
+        "tags": ["dhbw", "food"],
+        "url": "https://www.stw-ma.de/essen-trinken/autoload/"
+    },
+
+    {
+        "de": "Die Öffnungszeiten der Bibliothek unter der Woche sind von 10-22 Uhr",
+        "en": "The library's opening hours during the week are from 10:00 to 22:00.",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek"
+    },
+
+    {
+        "de": "Die Bibliothek der DHBW Mannheim hat auch Samstags von 10-18 Uhr geöffnet.",
+        "en": "The DHBW Mannheim library is also open on Saturdays from 10:00 - 18:00.",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek"
+    },
+
+    {
+        "de": "Du kannst dich auch online über Bestände und Leihfristen von Literatur erkundigen. ",
+        "en": "You can also find out online about stocks and loan periods for literature.",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek"
+    },
+
+    {
+        "de": "Du hast mit deinem DHBW-Konto Zugriff auf große und externe Datenbanken.",
+        "en": "With your DHBW account you have access to large and external literature databases.",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek"
+    },
+
+    {
+        "de": "Du kannst deine Campuscard für die Bibliothek der Universität Mannheim freischalten lassen.",
+        "en": "You can have your CampusCard activated for the University Library of the City of Mannheim.",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek/lernen-arbeiten"
+    },
+
+    {
+        "de": "Es gibt frei zugängliche Learning-Rooms über der Bibliothek (Zugang durch die Bibliothek)",
+        "en": "There are freely accessible Learning Rooms above the library. (Access through the library)",
+        "tags": ["dhbw", "library"],
+        "url": "https://www.mannheim.dhbw.de/service/bibliothek/lernen-arbeiten"
+    },
+
+    {
+        "de": "Nutze die zusätzlichen Angebote für die Mathe-Vorlesung.",
+        "en": "Use the additional offers for your math lecture.",
+        "tags": ["dhbw", "study"],
+        "url": ""
+    },
+
+    {
+        "de": "Deinen Stundenplan findest unter 'dhbw.app'. ",
+        "en": "You can find your timetable at dhbw.app",
+        "tags": ["dhbw", "study"],
+        "url": "dhbw.app"
+    },
+
+    {
+        "de": "Du kannst Leistungen aus einem vorherigen Studium anerkennen lassen.",
+        "en": "You can have credits from a previous degree recognized.",
+        "tags": ["dhbw", "study"],
+        "url": ""
+    },
+
+    {
+        "de": "Es gibt ein Sportangebot für Studierende in Mannheim (Sportscard).",
+        "en": "There is a sports program for students in Mannheim. (Sportscard).",
+        "tags": ["dhbw"],
+        "url": "https://www.hochschulsport.uni-mannheim.de/angebote/aktueller_zeitraum_0/_SportsCard.html?lang=de"
+    },
+
+    {
+        "de": "In Gebäude C in der Coblitzallee gibt es im ersten Stock einen kostenlosen Wasserspender. ",
+        "en": "There is a free water dispenser on the second floor of Building C in Coblitzallee.",
+        "tags": ["dhbw", "study"],
+        "url": ""
+    },
+
+    {
+        "de": "Du kannst dich vorbereiten, indem du eine Entwicklungsumgebung für das Programmieren mín C einrichtest.",
+        "en": "You can prepare yourself by installing a development environment for programming with C.",
+        "tags": ["tinf", "wwi"],
+        "url": ""
+    },
+
+    {
+        "de": "Ein Tutorial zum installieren der Entwicklungsumgebung findest du auf dieser Webseite ;)",
+        "en": "You can find a tutorial for installing a development environment on this website ;)",
+        "tags": ["tinf", "wwi"],
+        "url": ""
+    },
+
+    {
+        "de": "Du bekommst JetBrains kostenlos.",
+        "en": "You can get JetBrains for free.",
+        "tags": ["dhbw", "free"],
+        "url": "https://www.jetbrains.com/community/education/#students"
+    },
+
+    {
+        "de": "Du bekommst GitHub mit Copilot kostenlos.",
+        "en": "You can get GitHub with Copilot for free.",
+        "tags": ["dhbw", "free"],
+        "url": "https://education.github.com/pack"
+    },
+
+    {
+        "de": "Du kannst Office 365 für 5€ im Jahr bekommen.",
+        "en": "You can get Office 365 for €5 a year.",
+        "tags": ["dhbw"],
+        "url": "https://bildung365.de/"
+    },
+
+    {
+        "de": "Du bekommst als Student Amazon Prime ½ Jahr kostenlos, danach für 50% des Preises.",
+        "en": "As a student you get Amazon Prime for free for ½ year, then for 50% of the price.",
+        "tags": ["dhbw"],
+        "url": "https://www.amazon.de/amazonprime?primeCampaignId=studentWlpPrimeRedir&tag=student2024-21"
     }
 
 ]
