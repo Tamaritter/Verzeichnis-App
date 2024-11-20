@@ -12,6 +12,7 @@ import {
   Home as HomeIcon,
   Info as InfoIcon,
   Search as SearchIcon,
+  School as SchoolIcon,
   SvgIconComponent,
 } from '@mui/icons-material';
 import React from 'react';
@@ -41,6 +42,11 @@ const pages: IPage[] = [
     name: 'Select Course',
     path: '/course-selector',
     icon: SearchIcon,
+  },
+  {
+    name: 'Tutorials',
+    path: '/tutorials',
+    icon: SchoolIcon,
   },
 ];
 

@@ -19,7 +19,8 @@
     "@mui/material-nextjs": "^6.1.7",
     "next": "15.0.3",
     "react": "19.0.0-rc-6f0dc294-20241119",
-    "react-dom": "19.0.0-rc-6f0dc294-20241119"
+    "react-dom": "19.0.0-rc-6f0dc294-20241119",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",

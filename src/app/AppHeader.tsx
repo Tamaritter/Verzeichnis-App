@@ -53,7 +53,6 @@ export default async function AppHeader() {
   }
 
   const subjects = await getSubjects();
-  console.log(subjects);
 
   return (
     <>
