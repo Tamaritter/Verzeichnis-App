@@ -3,5 +3,48 @@
         "name": "dhbw",
         "de": "Duale Hochschule Baden-Württemberg",
         "en": "Corporate State University Baden-Württemberg"
+    },
+
+    {
+        "name": "connect",
+        "de": "Untereinander Kontakte knüpfen",
+        "en": "connect with each other"
+    },
+
+    {
+        "name": "food",
+        "de": "Verpflegung",
+        "en": "catering"
+    },
+
+    {
+        "name": "library",
+        "de": "Bibliothek",
+        "en": "library"
+    },
+
+    {
+        "name": "study",
+        "de": "Studium",
+        "en": "study"
+    },
+
+    {
+        "name": "tinf",
+        "de": "Technische Informatik",
+        "en": "technical computer science"
+    },
+
+    {
+        "name": "wwi",
+        "de": "Wirtschaftsinformatik",
+        "en": "business informatics"
+    },
+
+    
+    {
+        "name": "free",
+        "de": "kostenlos",
+        "en": "free"
     }
 ]
