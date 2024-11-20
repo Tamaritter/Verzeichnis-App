@@ -1,15 +1,14 @@
+'use server';
 import {Paper, Typography} from "@mui/material";
-import {readCookie} from "@/cookieManager";
 import motd from "@/content/motd.json";
-import {SubjectCategory, subjects} from "@/content/subjects";
+import {filterMotd, SubjectCategory} from "@/content/subjects";
+import {readCookie} from "@/cookieManager";
 
 export default async function Motd() {
 
     const subjectString = await readCookie<string>("subject");
-    const subject = subjectString ? subjects.get(subjectString) : undefined;
-    const subjectCategory = subject ? subject.category : SubjectCategory.DHBW;
 
-    const filteredMotd = motd.filter((entry) => entry.tags.includes(subjectCategory) || entry.tags.includes(SubjectCategory.DHBW));
+    const filteredMotd = filterMotd(SubjectCategory.DHBW, motd);
     if (filteredMotd.length === 0) {
         return null;
     }

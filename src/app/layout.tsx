@@ -43,19 +43,19 @@ export default function RootLayout({
         >
         <AppRouterCacheProvider options={{enableCssLayer: true}}>
             <StyledEngineProvider>
-            <ThemeProvider theme={theme}>
-                <Box sx={{display: 'flex'}}>
-                    <CssBaseline/>
-                    <AppHeader/>
-                    <Box
-                        component="main"
-                        sx={{flexGrow: 1, p: 3, width: {sm: `calc(100% - ${Defaults.drawerWidth}px)`}}}
-                    >
-                        <Toolbar/>
-                        {children}
+                <ThemeProvider theme={theme}>
+                    <Box sx={{display: 'flex'}}>
+                        <CssBaseline/>
+                        <AppHeader/>
+                        <Box
+                            component="main"
+                            sx={{flexGrow: 1, p: 3, width: {sm: `calc(100% - ${Defaults.drawerWidth}px)`}}}
+                        >
+                            <Toolbar/>
+                            {children}
+                        </Box>
                     </Box>
-                </Box>
-            </ThemeProvider>
+                </ThemeProvider>
             </StyledEngineProvider>
         </AppRouterCacheProvider>
         </body>

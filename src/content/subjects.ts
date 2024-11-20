@@ -2,16 +2,36 @@ export enum SubjectCategory {
     DHBW = "dhbw",
     Informatik = "informatik",
     Wirtschaft = "wirtschaft",
+    Wirtschaftsinformatik = "wirtschaftsinformatik",
 }
 
-interface Subject {
+export interface Subject {
+    tag: string;
     de: string;
     en: string;
-    category: SubjectCategory;
+    faculty: Faculty;
+    category: string;
 }
 
-export const subjects: Map<string, Subject> = new Map([
-    ["ai", {de: "Angewandte Informatik", en: "Applied Computer Science", category: SubjectCategory.Informatik}],
-    ["cs", {de: "Cyber Security", en: "Cyber Security", category: SubjectCategory.Informatik}],
-    ["it", {de: "Informationstechnik", en: "Information Technology", category: SubjectCategory.Informatik}],
-]);
+export type Faculty = "Technik" | "Wirtschaft" | "Gesundheit";
+export type FacultySubjects = { tech: Subject[], eco: Subject[], health: Subject[] };
+
+interface MOTD {
+    de: string;
+    en: string;
+    tags: string[];
+    url: string;
+}
+
+export function filterMotd(subject: SubjectCategory, motd: MOTD[]): MOTD[] {
+    switch (subject) {
+        case SubjectCategory.Informatik:
+            return motd.filter((entry) => entry.tags.includes(SubjectCategory.Informatik));
+        case SubjectCategory.Wirtschaft:
+            return motd.filter((entry) => entry.tags.includes(SubjectCategory.Wirtschaft));
+        case SubjectCategory.Wirtschaftsinformatik:
+            return motd.filter((entry) => entry.tags.includes(SubjectCategory.Wirtschaft) || entry.tags.includes(SubjectCategory.Informatik));
+        default:
+            return motd.filter((entry) => entry.tags.includes(SubjectCategory.DHBW));
+    }
+}

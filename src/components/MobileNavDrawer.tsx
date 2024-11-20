@@ -5,8 +5,13 @@ import React from "react";
 import {Menu as MenuIcon} from "@mui/icons-material";
 import {Portal} from "@mui/base";
 import {Defaults} from "@/appDefaults";
+import {FacultySubjects, Subject} from "@/content/subjects";
 
-export default function MobileNavDrawer() {
+interface MobileNavDrawerProps {
+    subjects: FacultySubjects;
+}
+
+export default function MobileNavDrawer({subjects}: MobileNavDrawerProps) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
 
@@ -53,7 +58,7 @@ export default function MobileNavDrawer() {
                         '& .MuiDrawer-paper': {boxSizing: 'border-box', width: Defaults.drawerWidth},
                     }}
                 >
-                    <Navigation isMobile/>
+                    <Navigation isMobile subjects={subjects}/>
                 </Drawer>
             </Portal>
         </>

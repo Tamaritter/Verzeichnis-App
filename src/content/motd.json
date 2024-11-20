@@ -10,6 +10,18 @@
         "en": "The DHBW Mannheim is the best university!",
         "tags": ["dhbw", "motivation", "mannheim"],
         "url": "https://www.mannheim.dhbw.de"
+    },
+    {
+        "de": "Hacker wollen nur spielen!",
+        "en": "Hackers just want to play!",
+        "tags": ["hacker", "informatik"],
+        "url": "https://www.heise.de"
+    },
+    {
+        "de": "Die Welt ist eine Scheibe!",
+        "en": "The world is a disc!",
+        "tags": ["wirtschaft"],
+        "url": "https://www.welt.de"
     }
 
 ]

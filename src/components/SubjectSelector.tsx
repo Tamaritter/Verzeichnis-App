@@ -1,10 +1,29 @@
-import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent} from "@mui/material";
+import {FormControl, InputLabel, ListSubheader, MenuItem, Select, SelectChangeEvent} from "@mui/material";
 import React, {ReactElement, useEffect} from "react";
-import {subjects} from "@/content/subjects";
-import {createCookie, readCookie} from "@/cookieManager";
+import {FacultySubjects, Subject, SubjectCategory} from "@/content/subjects";
+import {readCookie, setCookie} from "@/cookieManager";
 
-export default function SubjectSelector() {
+interface SubjectSelectorProps {
+    subjects: FacultySubjects;
+}
+
+export default function SubjectSelector({subjects}: SubjectSelectorProps) {
     const [subject, setSubject] = React.useState('');
+    const tech: ReactElement[] = [];
+    const eco: ReactElement[] = [];
+    const health: ReactElement[] = [];
+
+    subjects.tech.forEach((subject, index) => (
+        tech.push(<MenuItem key={subject.tag} value={subject.tag}>{subject.de}</MenuItem>)
+    ));
+
+    subjects.eco.forEach((subject, index) => (
+        eco.push(<MenuItem key={subject.tag} value={subject.tag}>{subject.de}</MenuItem>)
+    ));
+
+    subjects.health.forEach((subject, index) => (
+        health.push(<MenuItem key={subject.tag} value={subject.tag}>{subject.de}</MenuItem>)
+    ));
 
     useEffect(() => {
        readCookie<string>("subject").then((storedSubject) => {
@@ -16,14 +35,9 @@ export default function SubjectSelector() {
 
     const handleChange = (event: SelectChangeEvent) => {
         setSubject(event.target.value as string);
-        createCookie('subject', event.target.value as string).catch(console.warn);
+        setCookie('subject', event.target.value as string).catch(console.warn);
     };
 
-    const items: ReactElement[] = [];
-
-    subjects.forEach((subject, index) => (
-        items.push(<MenuItem key={index} value={index}>{subject.de}</MenuItem>)
-    ))
 
     return (
         <FormControl fullWidth>
@@ -33,7 +47,12 @@ export default function SubjectSelector() {
                 value={subject}
                 onChange={handleChange}
                 variant="outlined">
-                {items}
+                <ListSubheader>Technik</ListSubheader>
+                {tech}
+                <ListSubheader>Wirtschaft</ListSubheader>
+                {eco}
+                <ListSubheader>Gesundheit</ListSubheader>
+                {health}
             </Select>
         </FormControl>
     );

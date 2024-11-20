@@ -23,7 +23,12 @@ const pages: IPage[] = [{
     icon: InfoIcon
 }];
 
-export default function Navigation({isMobile = false}: { isMobile?: boolean }) {
+interface NavigationProps {
+    isMobile?: boolean;
+    subjects: FacultySubjects;
+}
+
+export default function Navigation({isMobile = false, subjects}: NavigationProps) {
 
     const pathname = usePathname();
 
