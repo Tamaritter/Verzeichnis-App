@@ -1,9 +1,13 @@
+"use server";
 import Grid from '@mui/material/Grid2';
 import {Paper, Typography} from "@mui/material";
 import {Defaults} from "@/appDefaults";
 import Motd from "@/app/Motd";
 
-export default function Home() {
+
+export default async function Home() {
+
+
     return (
         <Grid container spacing={3}>
             <Grid size={{xs: 0, sm: 3}}/>

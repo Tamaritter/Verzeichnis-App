@@ -1,11 +1,12 @@
 "use client";
 import {Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar} from "@mui/material";
-import {Home as HomeIcon, Info as InfoIcon, SvgIconComponent} from "@mui/icons-material";
+import {Home as HomeIcon, Info as InfoIcon, Search as SearchIcon, SvgIconComponent} from "@mui/icons-material";
 import React from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {Defaults} from "@/appDefaults";
 import SubjectSelector from "@/components/SubjectSelector";
+import {FacultySubjects} from "@/content/subjects";
 
 interface IPage {
     name: string;
@@ -21,6 +22,11 @@ const pages: IPage[] = [{
     name: 'About',
     path: '/about',
     icon: InfoIcon
+},
+{
+    name: 'Select Course',
+    path: '/course-selector',
+    icon: SearchIcon
 }];
 
 interface NavigationProps {
@@ -33,7 +39,7 @@ export default function Navigation({isMobile = false, subjects}: NavigationProps
     const pathname = usePathname();
 
     return (
-        <Box sx={{width: Defaults.drawerWidth-1}}>
+        <Box sx={{width: Defaults.drawerWidth - 1}}>
             {!isMobile ? <Toolbar/> : null}
             <List>
                 {pages.map((page, index) => (
@@ -47,9 +53,6 @@ export default function Navigation({isMobile = false, subjects}: NavigationProps
                     </ListItemButton>
                 ))}
                 <Divider sx={{mt: 5, mb: 5}}/>
-                <ListItem>
-                    <SubjectSelector/>
-                </ListItem>
             </List>
         </Box>
     )
