@@ -17,7 +17,7 @@ export default function FacultySelector() {
     }
   }, [params.course]);
 
-  const handleChange = (event: SelectChangeEvent<string>) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setFaculty(event.target.value);
     router.push(`/course-selector/${event.target.value}`);
   };

@@ -24,7 +24,7 @@ export default function SubjectSelector({
     }
   }, [params.course, subject]);
 
-  const handleChange = (event: SelectChangeEvent<string>) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setSubject(event.target.value);
     router.push(`/course-selector/${faculty}/${event.target.value}`);
   };

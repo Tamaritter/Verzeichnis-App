@@ -22,7 +22,7 @@ export default function YearSelector({
     }
   }, [params.course, year]);
 
-  const handleChange = (event: SelectChangeEvent<string>) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setYear(event.target.value);
     router.push(
       `/course-selector/${faculty}/${params.course?.[1]}/${event.target.value}`
