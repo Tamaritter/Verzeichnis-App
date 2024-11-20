@@ -1,4 +1,4 @@
 export const Defaults = {
-    appName: "DHBW Verzeichnis",
-    drawerWidth: 240,
-}
+  appName: 'DHBW Verzeichnis',
+  drawerWidth: 240,
+};
