@@ -27,6 +27,29 @@ export interface CalendarEvent {
   calendarId?: string;
 }
 
+export interface Course {
+  id: number;
+  name: string;
+  site: string;
+  faculty: string;
+  year: number;
+  courseIdentifier: string;
+  specialization: never;
+  verified: boolean;
+  public: boolean;
+  hidden: boolean;
+  degree: Degree;
+}
+
+export interface Degree {
+  id: number;
+  abbreviation: string;
+  name: string;
+  faculty: string;
+  sites: string[];
+  global: boolean;
+}
+
 export type JSONEvents = {[key: string]: CourseEvent};
 export type ExtendedDataFormat = {[key: string]: {[subj: string]: unknown}};
 
