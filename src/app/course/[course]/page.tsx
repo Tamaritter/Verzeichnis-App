@@ -1,6 +1,6 @@
 'use server';
 import {Paper, Typography} from '@mui/material';
-import {Course} from '@/components/courseUtil';
+import {Course, getCourse} from '@/components/courseUtil';
 import SaveButton from '@/app/course/[course]/SaveButton';
 
 export default async function CoursePage({
@@ -10,14 +10,7 @@ export default async function CoursePage({
 }) {
   const {course} = await params;
 
-  const data = await fetch('https://api.dhbw.app/course/' + course, {
-    next: {
-      revalidate: 3600,
-    },
-    cache: 'force-cache',
-  });
-
-  const jsonData: Course = await data.json();
+  const jsonData: Course = await getCourse(course);
 
   return (
     <Paper sx={{p: 2}}>

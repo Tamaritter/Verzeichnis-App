@@ -27,23 +27,17 @@ interface MOTD {
   url: string;
 }
 
-export function filterMotd(subject: SubjectCategory, motd: MOTD[]): MOTD[] {
-  switch (subject) {
-    case SubjectCategory.Informatik:
-      return motd.filter(entry =>
-        entry.tags.includes(SubjectCategory.Informatik)
-      );
-    case SubjectCategory.Wirtschaft:
-      return motd.filter(entry =>
-        entry.tags.includes(SubjectCategory.Wirtschaft)
-      );
-    case SubjectCategory.Wirtschaftsinformatik:
-      return motd.filter(
-        entry =>
-          entry.tags.includes(SubjectCategory.Wirtschaft) ||
-          entry.tags.includes(SubjectCategory.Informatik)
-      );
-    default:
-      return motd.filter(entry => entry.tags.includes(SubjectCategory.DHBW));
+export function filterMotd(
+  course: string,
+  motd: MOTD[],
+  filterDefault: boolean = false
+): MOTD[] {
+  const lowerCaseCourse = course.toLowerCase();
+  if (filterDefault) {
+    return motd.filter(
+      entry =>
+        entry.tags.includes(lowerCaseCourse) || entry.tags.includes('dhbw')
+    );
   }
+  return motd.filter(entry => entry.tags.includes(lowerCaseCourse));
 }

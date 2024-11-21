@@ -16,12 +16,9 @@ export default async function Home() {
           <br />
         </Paper>
       </Grid>
-      <Grid size={{xs: 0, sm: 3}} />
-      <Grid size={{xs: 0, sm: 3}} />
-      <Grid size={{xs: 12, sm: 6}}>
+      <Grid size={{xs: 12, sm: 3}}>
         <Motd />
       </Grid>
-      <Grid size={{xs: 0, sm: 3}} />
     </Grid>
   );
 }

@@ -87,6 +87,14 @@ export async function getSubjects(): Promise<ExtendedDataFormat> {
   return response.json();
 }
 
+export async function getCourse(course: string): Promise<Course> {
+  const response = await fetch(`https://api.dhbw.app/course/${course}`, {
+    next: {revalidate: 3600},
+    cache: 'force-cache',
+  });
+  return response.json();
+}
+
 export async function hasSaturday(events: CalendarEvent[]): Promise<boolean> {
   for (const event of events) {
     const start = new Date(event.start);
