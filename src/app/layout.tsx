@@ -10,7 +10,7 @@ import {
   ThemeProvider,
   Toolbar,
 } from '@mui/material';
-import theme from '@/theme';
+import theme, {darkTheme} from '@/theme';
 import {Roboto} from 'next/font/google';
 import {Defaults} from '@/appDefaults';
 
@@ -49,7 +49,7 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider options={{enableCssLayer: true}}>
           <StyledEngineProvider>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={darkTheme}>
               <Box sx={{display: 'flex'}}>
                 <CssBaseline />
                 <AppHeader />

@@ -13,6 +13,7 @@ import {
   Info as InfoIcon,
   Search as SearchIcon,
   School as SchoolIcon,
+  EventNote as EventNoteIcon,
   SvgIconComponent,
 } from '@mui/icons-material';
 import React from 'react';
@@ -47,6 +48,11 @@ const pages: IPage[] = [
     name: 'Tutorials',
     path: '/tutorials',
     icon: SchoolIcon,
+  },
+  {
+    name: 'Schedule',
+    path: 'https://dhbw.ottercloud.net',
+    icon: EventNoteIcon,
   },
 ];
 
