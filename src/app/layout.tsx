@@ -10,7 +10,7 @@ import {
   ThemeProvider,
   Toolbar,
 } from '@mui/material';
-import theme, {darkTheme} from '@/theme';
+import {darkTheme} from '@/theme';
 import {Roboto} from 'next/font/google';
 import {Defaults} from '@/appDefaults';
 

@@ -1,13 +1,5 @@
 'use server';
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  Paper,
-  Typography,
-} from '@mui/material';
+import {Box, Button, Card, CardContent, Chip, Typography} from '@mui/material';
 import motd from '@/content/motd.json';
 import {filterMotd} from '@/content/subjects';
 import {readCookie} from '@/cookieManager';
