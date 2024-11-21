@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.13.5",
     "@mui/base": "^5.0.0-beta.61",
     "@mui/icons-material": "^6.1.7",
+    "@mui/lab": "^6.0.0-beta.16",
     "@mui/material": "^6.1.7",
     "@mui/material-nextjs": "^6.1.7",
     "next": "15.0.3",
