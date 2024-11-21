@@ -9,18 +9,19 @@ import {
   Toolbar,
 } from '@mui/material';
 import {
+  EventNote as EventNoteIcon,
   Home as HomeIcon,
   Info as InfoIcon,
-  Search as SearchIcon,
   School as SchoolIcon,
-  EventNote as EventNoteIcon,
+  Search as SearchIcon,
   SvgIconComponent,
 } from '@mui/icons-material';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import {Defaults} from '@/appDefaults';
 import {FacultySubjects} from '@/content/subjects';
+import {readCookie} from '@/cookieManager';
 
 interface IPage {
   name: string;
@@ -49,11 +50,6 @@ const pages: IPage[] = [
     path: '/tutorials',
     icon: SchoolIcon,
   },
-  {
-    name: 'Schedule',
-    path: 'https://dhbw.ottercloud.net',
-    icon: EventNoteIcon,
-  },
 ];
 
 interface NavigationProps {
@@ -63,6 +59,11 @@ interface NavigationProps {
 
 export default function Navigation({isMobile = false}: NavigationProps) {
   const pathname = usePathname();
+  const [course, setCourse] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    readCookie<string>('course').then(setCourse).catch(console.warn);
+  }, []);
 
   return (
     <Box sx={{width: Defaults.drawerWidth - 1}}>
@@ -83,6 +84,19 @@ export default function Navigation({isMobile = false}: NavigationProps) {
           </ListItemButton>
         ))}
         <Divider sx={{mt: 5, mb: 5}} />
+        <ListItemButton
+          component={Link}
+          href={
+            course
+              ? 'https://dhbw.ottercloud.net/course/' + course
+              : 'https://dhbw.ottercloud.net'
+          }
+        >
+          <ListItemIcon>
+            <EventNoteIcon />
+          </ListItemIcon>
+          <ListItemText>Schedule</ListItemText>
+        </ListItemButton>
       </List>
     </Box>
   );
