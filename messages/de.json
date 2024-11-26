@@ -1,0 +1,17 @@
+{
+  "HomePage": {
+    "title": "Willkommen bei der {appName} App"
+  },
+  "Motd": {
+    "title": "Wusstest du schon?",
+    "readMore": "Mehr erfahren"
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "selectCourse": "Kurs auswählen",
+    "tutorials": "Tutorials",
+    "schedule": "Stundenplan"
+  }
+}

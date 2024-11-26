@@ -2,7 +2,7 @@
 
 import {Paper} from '@mui/material';
 
-import {getTutorials} from '@/app/tutorials/util';
+import {getTutorials} from '@/app/[locale]/tutorials/util';
 import {notFound} from 'next/navigation';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';

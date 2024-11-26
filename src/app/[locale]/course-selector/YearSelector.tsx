@@ -2,7 +2,7 @@
 import {MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import React, {useEffect} from 'react';
 import {useParams, useRouter} from 'next/navigation';
-import {Faculty} from '@/app/course-selector/CourseTypes';
+import {Faculty} from '@/lib/CourseTypes';
 
 export default function YearSelector({
   faculty,

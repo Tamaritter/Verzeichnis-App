@@ -19,7 +19,9 @@
     "@mui/material": "^6.1.7",
     "@mui/material-nextjs": "^6.1.7",
     "next": "15.0.3",
+    "next-intl": "^3.25.2",
     "react": "19.0.0-rc-6f0dc294-20241119",
+    "react-cookie": "^7.2.2",
     "react-dom": "19.0.0-rc-6f0dc294-20241119",
     "react-markdown": "^9.0.1"
   },

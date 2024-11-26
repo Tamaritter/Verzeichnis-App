@@ -1,7 +1,7 @@
 'use server';
 import {Paper, Typography} from '@mui/material';
 import {Course, getCourse} from '@/components/courseUtil';
-import SaveButton from '@/app/course/[course]/SaveButton';
+import SaveButton from '@/app/[locale]/course/[course]/SaveButton';
 
 export default async function CoursePage({
   params,

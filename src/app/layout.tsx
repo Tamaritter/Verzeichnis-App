@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
-import AppHeader from '@/app/AppHeader';
+import AppHeader from '@/app/[locale]/AppHeader';
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {
   Box,
@@ -13,6 +13,7 @@ import {
 import {darkTheme} from '@/theme';
 import {Roboto} from 'next/font/google';
 import {Defaults} from '@/appDefaults';
+import WrappedCookiesProvider from '@/components/WrappedCookiesProvider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -50,21 +51,11 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{enableCssLayer: true}}>
           <StyledEngineProvider>
             <ThemeProvider theme={darkTheme}>
-              <Box sx={{display: 'flex'}}>
-                <CssBaseline />
-                <AppHeader />
-                <Box
-                  component="main"
-                  sx={{
-                    flexGrow: 1,
-                    p: 3,
-                    width: {sm: `calc(100% - ${Defaults.drawerWidth}px)`},
-                  }}
-                >
-                  <Toolbar />
-                  {children}
-                </Box>
-              </Box>
+              <WrappedCookiesProvider
+                defaultSetOptions={{secure: true, sameSite: 'lax', path: '/'}}
+              >
+                {children}
+              </WrappedCookiesProvider>
             </ThemeProvider>
           </StyledEngineProvider>
         </AppRouterCacheProvider>

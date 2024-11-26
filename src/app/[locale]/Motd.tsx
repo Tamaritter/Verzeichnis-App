@@ -2,11 +2,12 @@
 import {Box, Button, Card, CardContent, Chip, Typography} from '@mui/material';
 import motd from '@/content/motd.json';
 import {filterMotd} from '@/content/subjects';
-import {readCookie} from '@/cookieManager';
+import {readCookie} from '@/lib/cookieManager';
 import {getCourse} from '@/components/courseUtil';
 import Link from 'next/link';
+import {getTranslations} from 'next-intl/server';
 
-export default async function Motd() {
+export default async function Motd({locale}: {locale: string}) {
   const courseCookie = await readCookie<string>('course');
   const course = courseCookie ? await getCourse(courseCookie) : undefined;
   const filter = course ? course.degree.abbreviation : 'dhbw';
@@ -17,6 +18,8 @@ export default async function Motd() {
   }
   const randomMotd =
     filteredMotd[Math.floor(Math.random() * filteredMotd.length)];
+
+  const t = await getTranslations('Motd');
 
   return (
     <>
@@ -43,7 +46,7 @@ export default async function Motd() {
               color: 'secondary.main',
             }}
           >
-            Did you know?
+            {t('title')}
           </Typography>
           <Typography
             variant="body1"
@@ -53,7 +56,7 @@ export default async function Motd() {
               fontStyle: 'italic',
             }}
           >
-            {randomMotd.en}
+            {locale === 'de' ? randomMotd.de : randomMotd.en}
           </Typography>
           <Box
             sx={{
@@ -74,7 +77,7 @@ export default async function Motd() {
                   px: 3,
                 }}
               >
-                Read more
+                {t('readMore')}
               </Button>
             )}
           </Box>

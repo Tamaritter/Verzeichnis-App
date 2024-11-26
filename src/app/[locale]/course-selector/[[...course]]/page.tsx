@@ -9,7 +9,7 @@ import {
   Paper,
   Typography,
 } from '@mui/material';
-import FacultySelector from '@/app/course-selector/FacultySelector';
+import FacultySelector from '@/app/[locale]/course-selector/FacultySelector';
 import React, {cache} from 'react';
 import {
   Faculty,
@@ -17,9 +17,9 @@ import {
   Subject,
   SubjectData,
   SubjectJson,
-} from '../CourseTypes';
+} from '../../../../lib/CourseTypes';
 import SubjectSelector from '../SubjectSelector';
-import YearSelector from '@/app/course-selector/YearSelector';
+import YearSelector from '@/app/[locale]/course-selector/YearSelector';
 import Link from 'next/link';
 import {ExtendedDataFormat, getSubjects} from '@/components/courseUtil';
 

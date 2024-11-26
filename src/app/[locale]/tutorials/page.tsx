@@ -1,5 +1,5 @@
 import {Paper} from '@mui/material';
-import {getTutorials} from '@/app/tutorials/util';
+import {getTutorials} from '@/app/[locale]/tutorials/util';
 
 export default async function Page() {
   const tutorials = getTutorials();

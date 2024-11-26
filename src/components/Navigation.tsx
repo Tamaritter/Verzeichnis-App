@@ -21,7 +21,8 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import {Defaults} from '@/appDefaults';
 import {FacultySubjects} from '@/content/subjects';
-import {readCookie} from '@/cookieManager';
+import {useCookies} from 'react-cookie';
+import {useTranslations} from 'next-intl';
 
 interface IPage {
   name: string;
@@ -31,22 +32,22 @@ interface IPage {
 
 const pages: IPage[] = [
   {
-    name: 'Home',
+    name: 'home',
     path: '/',
     icon: HomeIcon,
   },
   {
-    name: 'About',
+    name: 'about',
     path: '/about',
     icon: InfoIcon,
   },
   {
-    name: 'Select Course',
+    name: 'selectCourse',
     path: '/course-selector',
     icon: SearchIcon,
   },
   {
-    name: 'Tutorials',
+    name: 'tutorials',
     path: '/tutorials',
     icon: SchoolIcon,
   },
@@ -59,11 +60,13 @@ interface NavigationProps {
 
 export default function Navigation({isMobile = false}: NavigationProps) {
   const pathname = usePathname();
-  const [course, setCourse] = useState<string | undefined>(undefined);
+  const [cookies] = useCookies<'course', {course?: string}>(['course']);
+  const t = useTranslations('Navigation');
+  const [course, setCourse] = useState<string | undefined>();
 
   useEffect(() => {
-    readCookie<string>('course').then(setCourse).catch(console.warn);
-  }, []);
+    if (cookies.course) setCourse(cookies.course);
+  }, [cookies.course]);
 
   return (
     <Box sx={{width: Defaults.drawerWidth - 1}}>
@@ -80,7 +83,7 @@ export default function Navigation({isMobile = false}: NavigationProps) {
               <page.icon />
             </ListItemIcon>
 
-            <ListItemText primary={page.name} />
+            <ListItemText primary={t(page.name)} />
           </ListItemButton>
         ))}
         <Divider sx={{mt: 5, mb: 5}} />
@@ -95,7 +98,7 @@ export default function Navigation({isMobile = false}: NavigationProps) {
           <ListItemIcon>
             <EventNoteIcon />
           </ListItemIcon>
-          <ListItemText>Schedule</ListItemText>
+          <ListItemText primary={t('schedule')} />
         </ListItemButton>
       </List>
     </Box>

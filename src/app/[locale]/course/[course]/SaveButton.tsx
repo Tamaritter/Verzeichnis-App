@@ -1,5 +1,5 @@
 'use client';
-import {setCookie} from '@/cookieManager';
+import {setCookie} from '@/lib/cookieManager';
 import {LoadingButton} from '@mui/lab';
 import {useState} from 'react';
 

@@ -1,7 +1,7 @@
 'use client';
 import {MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import React, {ReactElement, useEffect} from 'react';
-import {Faculty} from '@/app/course-selector/CourseTypes';
+import {Faculty} from '@/lib/CourseTypes';
 import {useParams, useRouter} from 'next/navigation';
 
 export default function FacultySelector() {
