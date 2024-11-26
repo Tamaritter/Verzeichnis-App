@@ -12,7 +12,7 @@ export enum Faculty {
   Gesundheit = 'Gesundheit',
 }
 
-export type FacultySubjects = {[faculty in Faculty]: Subject[]};
+export type FacultySubjects = {[faculty: string]: Subject[]};
 export type SubjectJson = SubjectData[];
 export type SubjectData = {
   name: string;

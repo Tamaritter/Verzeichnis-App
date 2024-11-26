@@ -17,12 +17,11 @@ import {
   SvgIconComponent,
 } from '@mui/icons-material';
 import React, {useEffect, useState} from 'react';
-import Link from 'next/link';
-import {usePathname} from 'next/navigation';
 import {Defaults} from '@/appDefaults';
 import {FacultySubjects} from '@/content/subjects';
 import {useCookies} from 'react-cookie';
 import {useTranslations} from 'next-intl';
+import {Link, usePathname} from '@/i18n/routing';
 
 interface IPage {
   name: string;

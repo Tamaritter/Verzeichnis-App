@@ -114,10 +114,10 @@ export default async function CourseSelector({
 }: {
   params: Promise<{course?: string[]}>;
 }) {
-  const waitedParams = await params;
-  const faculty: Faculty | undefined = waitedParams.course?.[0] as Faculty;
-  const subject: string | undefined = waitedParams.course?.[1];
-  const year: string | undefined = waitedParams.course?.[2];
+  const {course} = await params;
+  const faculty: Faculty | undefined = course?.[0] as Faculty;
+  const subject: string | undefined = course?.[1];
+  const year: string | undefined = course?.[2];
 
   let years: number[] = [];
   let subjects: FacultySubjects | undefined;

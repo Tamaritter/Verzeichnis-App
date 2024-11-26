@@ -23,7 +23,8 @@
     "react": "19.0.0-rc-6f0dc294-20241119",
     "react-cookie": "^7.2.2",
     "react-dom": "19.0.0-rc-6f0dc294-20241119",
-    "react-markdown": "^9.0.1"
+    "react-markdown": "^9.0.1",
+    "universal-cookie": "^7.2.2"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",
@@ -32,6 +33,8 @@
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
     "gts": "5.3.1",
     "postcss": "^8",
     "prettier": "^3.3.3",
