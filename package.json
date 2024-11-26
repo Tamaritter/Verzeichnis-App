@@ -1,6 +1,6 @@
 {
   "name": "dhbw-verzeichnis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -13,22 +13,22 @@
     "@emotion/cache": "^11.13.5",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
-    "@mui/base": "^5.0.0-beta.61",
-    "@mui/icons-material": "^6.1.7",
+    "@mui/base": "^5.0.0-beta.62",
+    "@mui/icons-material": "^6.1.8",
     "@mui/lab": "^6.0.0-beta.16",
-    "@mui/material": "^6.1.7",
-    "@mui/material-nextjs": "^6.1.7",
+    "@mui/material": "^6.1.8",
+    "@mui/material-nextjs": "^6.1.8",
     "next": "15.0.3",
-    "next-intl": "^3.25.2",
-    "react": "19.0.0-rc-6f0dc294-20241119",
+    "next-intl": "^3.25.3",
+    "react": "19.0.0-rc-7670501b-20241124",
     "react-cookie": "^7.2.2",
-    "react-dom": "19.0.0-rc-6f0dc294-20241119",
+    "react-dom": "19.0.0-rc-7670501b-20241124",
     "react-markdown": "^9.0.1",
     "universal-cookie": "^7.2.2"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.13",
-    "@types/node": "^22.9.1",
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
@@ -37,7 +37,7 @@
     "@typescript-eslint/parser": "^8.16.0",
     "gts": "5.3.1",
     "postcss": "^8",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
