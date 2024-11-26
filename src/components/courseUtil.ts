@@ -1,6 +1,6 @@
 'use server';
 
-import {isoToReadable} from '@/helpers';
+import {isoToReadable} from '@/lib/helpers';
 
 export interface CourseEvent {
   entityType: string;

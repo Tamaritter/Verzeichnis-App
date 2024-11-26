@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import React, {ReactElement, useEffect} from 'react';
 import {FacultySubjects} from '@/content/subjects';
-import {readCookie, setCookie} from '@/cookieManager';
+import {readCookie, setCookie} from '@/lib/cookieManager';
 
 interface SubjectSelectorProps {
   subjects: FacultySubjects;
