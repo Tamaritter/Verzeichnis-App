@@ -1,10 +1,3 @@
-export enum SubjectCategory {
-  DHBW = 'dhbw',
-  Informatik = 'informatik',
-  Wirtschaft = 'wirtschaft',
-  Wirtschaftsinformatik = 'wirtschaftsinformatik',
-}
-
 export interface Subject {
   tag: string;
   de: string;

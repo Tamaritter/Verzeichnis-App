@@ -1,18 +1,10 @@
 import type {Metadata} from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
-import AppHeader from '@/app/[locale]/AppHeader';
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
-import {
-  Box,
-  CssBaseline,
-  StyledEngineProvider,
-  ThemeProvider,
-  Toolbar,
-} from '@mui/material';
+import {StyledEngineProvider, ThemeProvider} from '@mui/material';
 import {darkTheme} from '@/theme';
 import {Roboto} from 'next/font/google';
-import {Defaults} from '@/appDefaults';
 import WrappedCookiesProvider from '@/components/WrappedCookiesProvider';
 
 const geistSans = localFont({

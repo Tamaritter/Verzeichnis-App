@@ -1,12 +1,13 @@
 'use client';
 import {CookiesProvider} from 'react-cookie';
 import {CookieSetOptions} from 'universal-cookie';
+import {ReactNode} from 'react';
 
 export default function WrappedCookiesProvider({
   children,
   defaultSetOptions,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   defaultSetOptions: CookieSetOptions;
 }) {
   return (

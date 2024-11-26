@@ -17,7 +17,7 @@ import {
   Subject,
   SubjectData,
   SubjectJson,
-} from '../../../../lib/CourseTypes';
+} from '@/lib/CourseTypes';
 import SubjectSelector from '../SubjectSelector';
 import YearSelector from '@/app/[locale]/course-selector/YearSelector';
 import Link from 'next/link';
