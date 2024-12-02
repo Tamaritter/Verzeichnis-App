@@ -13,5 +13,15 @@
     "selectCourse": "Kurs auswählen",
     "tutorials": "Tutorials",
     "schedule": "Stundenplan"
+  },
+  "CourseSelector": {
+    "faculty": "Fakultät",
+    "course": "Kurs",
+    "subject": "Fach",
+    "class": "Klasse",
+    "year": "Jahrgang",
+    "technik": "Technik",
+    "wirtschaft": "Wirtschaft",
+    "gesundheit": "Gesundheit"
   }
 }

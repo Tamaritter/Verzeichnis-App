@@ -13,5 +13,15 @@
     "selectCourse": "Select course",
     "tutorials": "Tutorials",
     "schedule": "Schedule"
+  },
+  "CourseSelector": {
+    "faculty": "Faculty",
+    "course": "Course",
+    "subject": "Subject",
+    "class": "Class",
+    "year": "Year",
+    "technik": "Technology",
+    "wirtschaft": "Economics",
+    "gesundheit": "Health"
   }
 }

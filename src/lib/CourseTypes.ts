@@ -1,18 +1,15 @@
 export interface Subject {
   tag: string;
-  de: string;
-  en: string;
+  name: string;
   faculty: Faculty;
-  category: string;
 }
 
 export enum Faculty {
-  Technik = 'Technik',
-  Wirtschaft = 'Wirtschaft',
-  Gesundheit = 'Gesundheit',
+  Technik = 'technik',
+  Wirtschaft = 'wirtschaft',
+  Gesundheit = 'gesundheit',
 }
 
-export type FacultySubjects = {[faculty: string]: Subject[]};
 export type SubjectJson = SubjectData[];
 export type SubjectData = {
   name: string;

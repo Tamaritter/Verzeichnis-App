@@ -2,26 +2,22 @@
 
 import Grid from '@mui/material/Grid2';
 import {
-  Button,
   Divider,
   FormControl,
   InputLabel,
+  List,
   Paper,
   Typography,
 } from '@mui/material';
+import {School as SchoolIcon} from '@mui/icons-material';
 import FacultySelector from '@/app/[locale]/course-selector/FacultySelector';
 import React, {cache} from 'react';
-import {
-  Faculty,
-  FacultySubjects,
-  Subject,
-  SubjectData,
-  SubjectJson,
-} from '@/lib/CourseTypes';
+import {Faculty, Subject, SubjectData, SubjectJson} from '@/lib/CourseTypes';
 import SubjectSelector from '../SubjectSelector';
 import YearSelector from '@/app/[locale]/course-selector/YearSelector';
-import Link from 'next/link';
 import {ExtendedDataFormat, getSubjects} from '@/components/courseUtil';
+import {getTranslations} from 'next-intl/server';
+import {LinkButton} from '@/components/ListItemLink';
 
 const cachedProcessSubjects = cache(processSubjects);
 const cachedGetYears = cache(getYears);
@@ -29,6 +25,7 @@ const cachedGetClasses = cache(getClasses);
 
 function processSubjects(data: ExtendedDataFormat, faculty: Faculty) {
   const subjects: Subject[] = [];
+  console.log(faculty);
   for (const value of Object.values(data)) {
     for (const [subCategoryKey, subCategory] of Object.entries(value)) {
       if (subCategoryKey === 'size') continue;
@@ -37,24 +34,12 @@ function processSubjects(data: ExtendedDataFormat, faculty: Faculty) {
 
       subjects.push({
         tag: classes[0].name.replace(/MA-/g, '').replace(/\d{2}.*/g, ''),
-        de: classes[0].degreeName,
-        en: classes[0].degreeName,
-        faculty: classes[0].faculty as Faculty,
-        category: classes[0].faculty,
+        name: classes[0].degreeName,
+        faculty: faculty as Faculty,
       });
     }
   }
-
-  const technik = subjects.filter(
-    subject => subject.faculty === Faculty.Technik
-  );
-  const economy = subjects.filter(
-    subject => subject.faculty === Faculty.Wirtschaft
-  );
-  const health = subjects.filter(
-    subject => subject.faculty === Faculty.Gesundheit
-  );
-  return {Gesundheit: health, Technik: technik, Wirtschaft: economy};
+  return subjects;
 }
 
 function getYears(data: ExtendedDataFormat, faculty: Faculty, subject: string) {
@@ -118,14 +103,18 @@ export default async function CourseSelector({
   const faculty: Faculty | undefined = course?.[0] as Faculty;
   const subject: string | undefined = course?.[1];
   const year: string | undefined = course?.[2];
+  console.log(course);
 
   let years: number[] = [];
-  let subjects: FacultySubjects | undefined;
+  let subjects: Subject[] | undefined;
   let classes: SubjectData[] = [];
+
+  const t = await getTranslations('CourseSelector');
 
   if (faculty) {
     const data = await getSubjects();
     subjects = cachedProcessSubjects(data, faculty);
+    console.log(subjects);
     if (subject) {
       years = cachedGetYears(data, faculty, subject);
       if (year) {
@@ -144,17 +133,17 @@ export default async function CourseSelector({
           </Typography>
           <br />
           <FormControl fullWidth>
-            <InputLabel>Fakultät</InputLabel>
+            <InputLabel>{t('faculty')}</InputLabel>
             <FacultySelector />
           </FormControl>
           <br />
           <Divider />
           <FormControl fullWidth>
-            <InputLabel>Studiengang</InputLabel>
+            <InputLabel>{t('subject')}</InputLabel>
             <SubjectSelector subjects={subjects} faculty={faculty} />
           </FormControl>
           <FormControl fullWidth>
-            <InputLabel>Jahrgang</InputLabel>
+            <InputLabel>{t('year')}</InputLabel>
             <YearSelector faculty={faculty} years={years} />
           </FormControl>
         </Paper>
@@ -165,15 +154,17 @@ export default async function CourseSelector({
           <Grid size={{xs: 0, sm: 2}} />
           <Grid size={{xs: 12, sm: 8}}>
             <Paper sx={{p: 2}}>
-              {classes.map(cls => (
-                <Button
-                  key={cls.name}
-                  component={Link}
-                  href={`/course/${cls.name}`}
-                >
-                  {cls.name.replace(/MA-/g, '')}
-                </Button>
-              ))}
+              <List>
+                {classes.map(cls => (
+                  <LinkButton
+                    key={cls.name}
+                    href={`/course/${cls.name}`}
+                    text={cls.name.replace(/MA-/g, '')}
+                  >
+                    <SchoolIcon />
+                  </LinkButton>
+                ))}
+              </List>
             </Paper>
           </Grid>
           <Grid size={{xs: 0, sm: 2}} />

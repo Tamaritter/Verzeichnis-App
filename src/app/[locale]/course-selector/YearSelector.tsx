@@ -1,8 +1,9 @@
 'use client';
 import {MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import React, {useEffect} from 'react';
-import {useParams, useRouter} from 'next/navigation';
+import {useParams} from 'next/navigation';
 import {Faculty} from '@/lib/CourseTypes';
+import {useRouter} from '@/i18n/routing';
 
 export default function YearSelector({
   faculty,

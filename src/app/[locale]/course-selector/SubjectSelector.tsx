@@ -1,11 +1,12 @@
 'use client';
 import {MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import React, {ReactElement, useEffect} from 'react';
-import {Faculty, FacultySubjects} from '@/lib/CourseTypes';
-import {useParams, useRouter} from 'next/navigation';
+import {Faculty, Subject} from '@/lib/CourseTypes';
+import {useRouter} from '@/i18n/routing';
+import {useParams} from 'next/navigation';
 
 interface FacultySelectorProps {
-  subjects?: FacultySubjects;
+  subjects?: Subject[];
   faculty?: Faculty;
 }
 
@@ -31,10 +32,10 @@ export default function SubjectSelector({
 
   const items: ReactElement[] = [];
   if (faculty && subjects) {
-    subjects[faculty].forEach(subject => {
+    subjects.forEach(subject => {
       items.push(
         <MenuItem key={subject.tag} value={subject.tag}>
-          {subject.de}
+          {subject.name}
         </MenuItem>
       );
     });

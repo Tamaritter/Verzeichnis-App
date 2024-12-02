@@ -2,11 +2,14 @@
 import {MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import React, {ReactElement, useEffect} from 'react';
 import {Faculty} from '@/lib/CourseTypes';
-import {useParams, useRouter} from 'next/navigation';
+import {useRouter} from '@/i18n/routing';
+import {useParams} from 'next/navigation';
+import {useTranslations} from 'next-intl';
 
 export default function FacultySelector() {
   const params = useParams<{course?: string[]}>();
   const [faculty, setFaculty] = React.useState('');
+  const t = useTranslations('CourseSelector');
 
   const router = useRouter();
 
@@ -26,14 +29,14 @@ export default function FacultySelector() {
   for (const facultyName in Faculty) {
     items.push(
       <MenuItem key={facultyName} value={facultyName}>
-        {facultyName}
+        {t(facultyName.toLowerCase())}
       </MenuItem>
     );
   }
 
   return (
     <Select
-      label="Studiengang"
+      label={t('faculty')}
       value={faculty}
       onChange={handleChange}
       variant="outlined"
