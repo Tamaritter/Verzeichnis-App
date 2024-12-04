@@ -69,7 +69,7 @@ Total Installed Size:  418.82 MiB
 
 - Nach der Installation von MSYS2 wird es sich selbst über pacman aktualisieren, siehe die Update-Anleitung für weitere Informationen. (https://www.msys2.org/docs/updating/)
 
-- Quelle: https://code.visualstudio.com/docs/cpp/config-mingw
+##### Quelle: https://code.visualstudio.com/docs/cpp/config-mingw
 
 
 ### Füge den Pfad Ihres MinGW-w64 bin-Ordners zur Windows PATH-Umgebungsvariable hinzu, indem du die folgenden Schritte ausführst:
