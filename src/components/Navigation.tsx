@@ -50,6 +50,11 @@ const pages: IPage[] = [
     path: '/tutorials',
     icon: SchoolIcon,
   },
+  {
+    name: 'contact',
+    path: '/tutorials/kontakte',
+    icon: InfoIcon,
+  },
 ];
 
 interface NavigationProps {
