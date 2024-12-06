@@ -16,6 +16,7 @@ import {
   Search as SearchIcon,
   SvgIconComponent,
 } from '@mui/icons-material';
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import DiscountIcon from '@mui/icons-material/Discount';
 import React, {useEffect, useState} from 'react';
 import {Defaults} from '@/appDefaults';
@@ -109,6 +110,17 @@ export default function Navigation({isMobile = false}: NavigationProps) {
             <EventNoteIcon />
           </ListItemIcon>
           <ListItemText primary={t('schedule')} />
+        </ListItemButton>
+        <ListItemButton
+          component={Link}
+          href={
+            'https://www.stw-ma.de/essen-trinken/speiseplaene/mensaria-metropol-greenes/'
+          }
+        >
+          <ListItemIcon>
+            <RestaurantMenuIcon />
+          </ListItemIcon>
+          <ListItemText primary={t('food-menu')} />
         </ListItemButton>
       </List>
     </Box>

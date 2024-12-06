@@ -13,7 +13,8 @@
     "selectCourse": "Select course",
     "tutorials": "Tutorials",
     "schedule": "Schedule",
-    "discounts": "Discounts"
+    "discounts": "Discounts",
+    "food-menu": "Food menu"
   },
   "CourseSelector": {
     "faculty": "Faculty",

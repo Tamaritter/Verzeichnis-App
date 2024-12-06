@@ -13,7 +13,8 @@
     "selectCourse": "Kurs auswählen",
     "tutorials": "Tutorials",
     "schedule": "Stundenplan",
-    "discounts": "Ermäßigungen"
+    "discounts": "Ermäßigungen",
+    "food-menu": "Speiseplan"
   },
   "CourseSelector": {
     "faculty": "Fakultät",
