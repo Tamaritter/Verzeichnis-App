@@ -12,7 +12,8 @@
     "contact": "Contact",
     "selectCourse": "Select course",
     "tutorials": "Tutorials",
-    "schedule": "Schedule"
+    "schedule": "Schedule",
+    "discounts": "Discounts"
   },
   "CourseSelector": {
     "faculty": "Faculty",

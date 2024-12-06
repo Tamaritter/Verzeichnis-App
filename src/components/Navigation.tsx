@@ -16,6 +16,7 @@ import {
   Search as SearchIcon,
   SvgIconComponent,
 } from '@mui/icons-material';
+import DiscountIcon from '@mui/icons-material/Discount';
 import React, {useEffect, useState} from 'react';
 import {Defaults} from '@/appDefaults';
 import {FacultySubjects} from '@/content/subjects';
@@ -49,6 +50,16 @@ const pages: IPage[] = [
     name: 'tutorials',
     path: '/tutorials',
     icon: SchoolIcon,
+  },
+  {
+    name: 'contact',
+    path: '/contact',
+    icon: InfoIcon,
+  },
+  {
+    name: 'discounts',
+    path: '/discounts',
+    icon: DiscountIcon,
   },
 ];
 

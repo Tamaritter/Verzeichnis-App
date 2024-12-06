@@ -12,7 +12,8 @@
     "contact": "Kontakt",
     "selectCourse": "Kurs auswählen",
     "tutorials": "Tutorials",
-    "schedule": "Stundenplan"
+    "schedule": "Stundenplan",
+    "discounts": "Ermäßigungen"
   },
   "CourseSelector": {
     "faculty": "Fakultät",
